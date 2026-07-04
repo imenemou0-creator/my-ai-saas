@@ -22,7 +22,6 @@ export default function LandingPage() {
   const [email, setEmail] = useState('');
   const [isSubmittingEmail, setIsSubmittingEmail] = useState(false);
 
-  // 1️⃣ الخطوة الأولى: تشغيل محاكاة الفحص دون حفظ أي شيء في قاعدة البيانات حتى الآن
   const handleStartAudit = (e) => {
     e.preventDefault();
     if (!projectUrl) return;
@@ -61,7 +60,6 @@ export default function LandingPage() {
     }, intervalTime);
   };
 
-  // 2️⃣ الخطوة الثانية: حفظ الإيميل والـ URL معاً في خاناتهم المخصصة داخل Supabase عند الضغط على الزر
   const handleSaveLead = async (e) => {
     e.preventDefault();
     if (!email || !projectUrl) return;
@@ -92,7 +90,6 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-50 selection:bg-indigo-500/30 font-sans">
-      {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 border-b border-slate-800 bg-slate-950/80 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -114,7 +111,6 @@ export default function LandingPage() {
       </nav>
 
       <main className="pt-32 pb-20">
-        {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-medium mb-8">
             <Zap className="w-3 h-3" />
@@ -123,7 +119,7 @@ export default function LandingPage() {
           
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-gradient-to-b from-slate-50 to-slate-400 bg-clip-text text-transparent">
             Prouvez votre conformité IA <br className="hidden md:block" />
-            en 5 minutes, pas en 5 days.
+            en 5 minutes, pas en 5 jours.
           </h1>
           
           <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-400 mb-10 leading-relaxed">
@@ -236,7 +232,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Social Proof */}
         <section className="mt-24 py-12 border-y border-slate-900 bg-slate-900/30">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <p className="text-sm font-medium text-slate-500 uppercase tracking-widest mb-8">
@@ -251,7 +246,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Benefits Grid */}
         <section id="features" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">La confiance comme avantage compétitif</h2>
@@ -265,7 +259,7 @@ export default function LandingPage() {
               </div>
               <h3 className="text-xl font-bold mb-3">Audit Automatisé</h3>
               <p className="text-slate-400 leading-relaxed">
-                Scannez vos pipelines de données et modèles pour identifier les risques de biais et de sécurité en temps réel.
+                Scannez vos pipelines de données et modèles pour identifier les risks de biais et de sécurité en temps réel.
               </p>
             </div>
 
@@ -291,7 +285,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* How it works */}
         <section id="how-it-works" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 bg-indigo-600/5 rounded-[3rem] border border-indigo-500/10">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Trois étapes vers la certification</h2>
@@ -321,7 +314,6 @@ export default function LandingPage() {
         </section>
       </main>
 
-      {/* Footer */}
       <footer className="border-t border-slate-900 py-12 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
