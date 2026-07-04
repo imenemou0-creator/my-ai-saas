@@ -22,7 +22,7 @@ export default function LandingPage() {
   const [email, setEmail] = useState('');
   const [isSubmittingEmail, setIsSubmittingEmail] = useState(false);
 
-  const handleStartAudit = (e) => {
+  const handleStartAudit = (e:any) => {
     e.preventDefault();
     if (!projectUrl) return;
 
@@ -60,7 +60,7 @@ export default function LandingPage() {
     }, intervalTime);
   };
 
-  const handleSaveLead = async (e) => {
+  const handleSaveLead = async (e:any) => {
     e.preventDefault();
     if (!email || !projectUrl) return;
 
